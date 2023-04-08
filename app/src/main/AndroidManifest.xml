@@ -6,11 +6,20 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/backg"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.BodyMind"
         tools:targetApi="31">
+        <activity
+            android:name=".MainActivity3"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
         <activity
             android:name=".MainActivity2"
             android:exported="false" />

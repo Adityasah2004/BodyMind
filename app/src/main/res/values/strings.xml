@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">BodyMind</string>
+
+    //Headings
+    <string name="heading_one">EASY!APPOINTMENT</string>
+    <string name="heading_two">ONE ON ONE CONSULTING</string>
+    <string name="heading_three">QUICK DIAGNOSIS</string>
+
+
+    //Description
+    <string name="desc_one">Say goodbye to appointment headaches with EASY!APPOINTMENT - the hassle-free way to schedule your appointments!</string>
+    <string name="desc_two">Transform Your Healthcare Practice with Expert One-on-One Consulting</string>
+    <string name="desc_three">Get Rapid Answers with Quick Diagnosis: Your Shortcut to Efficient Healthcare Solutions</string>
+
 </resources>
