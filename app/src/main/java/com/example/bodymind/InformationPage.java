@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class MainActivity2 extends AppCompatActivity {
+public class InformationPage extends AppCompatActivity {
 
     ViewPager mSLideViewPager;
     LinearLayout mDotLayout;
@@ -25,7 +25,7 @@ public class MainActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_informationpage);
 
         backbtn = findViewById(R.id.backbtn);
         nextbtn = findViewById(R.id.nextbtn);
@@ -52,7 +52,7 @@ public class MainActivity2 extends AppCompatActivity {
                     mSLideViewPager.setCurrentItem(getitem(1),true);
                 else {
 
-                    Intent i = new Intent(MainActivity2.this, SignUpActivity.class);
+                    Intent i = new Intent(InformationPage.this, LoginActivity.class);
                     startActivity(i);
                     finish();
 
@@ -66,7 +66,7 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                Intent i = new Intent(MainActivity2.this, SignUpActivity.class);
+                Intent i = new Intent(InformationPage.this, LoginActivity.class);
                 startActivity(i);
                 finish();
 

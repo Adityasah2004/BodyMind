@@ -12,6 +12,9 @@
         android:theme="@style/Theme.BodyMind"
         tools:targetApi="31">
         <activity
+            android:name=".HomeScreen"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity3"
             android:exported="false" />
         <activity
@@ -21,10 +24,10 @@
             android:name=".SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".InformationPage"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
