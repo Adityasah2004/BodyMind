@@ -12,6 +12,54 @@
         android:theme="@style/Theme.BodyMind"
         tools:targetApi="31">
         <activity
+            android:name=".PatientList"
+            android:exported="false" />
+        <activity
+            android:name=".ToDo"
+            android:exported="false" />
+        <activity
+            android:name=".Registeration"
+            android:exported="false" />
+        <activity
+            android:name=".AppointmentList"
+            android:exported="false" />
+        <activity
+            android:name=".Med2"
+            android:exported="false" />
+        <activity
+            android:name=".Chat2"
+            android:exported="false" />
+        <activity
+            android:name=".Doctor"
+            android:exported="false" />
+        <activity
+            android:name=".Report"
+            android:exported="false" />
+        <activity
+            android:name=".Appointment"
+            android:exported="false" />
+        <activity
+            android:name=".Notification"
+            android:exported="false" />
+        <activity
+            android:name=".Med"
+            android:exported="false" />
+        <activity
+            android:name=".HomeScreen2"
+            android:exported="false" />
+        <activity
+            android:name=".Chat"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorSignup"
+            android:exported="false" />
+        <activity
+            android:name=".DoctorLogin"
+            android:exported="false" />
+        <activity
+            android:name=".RolePage"
+            android:exported="false" />
+        <activity
             android:name=".HomeScreen"
             android:exported="false" />
         <activity

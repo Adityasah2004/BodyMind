@@ -12,4 +12,14 @@
     <string name="desc_two">Transform Your Healthcare Practice with Expert One-on-One Consulting</string>
     <string name="desc_three">Get Rapid Answers with Quick Diagnosis: Your Shortcut to Efficient Healthcare Solutions</string>
 
+
+    <string name="chat_input_hint">Type your message here...</string>
+    <string name="send_button_desc">Send</string>
+    <string name="send">Send</string>
+    <string name="typing">Typing...</string>
+    <string name="online">Online</string>
+    <string name="offline">Offline</string>
+    <string name="chat_name">John Doe</string>
+
+
 </resources>

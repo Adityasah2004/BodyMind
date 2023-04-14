@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'com.google.gms.google-services'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
@@ -40,6 +41,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation 'com.github.TutorialsAndroid:GButton:v1.0.19'
     implementation 'com.google.android.gms:play-services-auth:20.5.0'
+    implementation 'com.android.support:cardview-v7:26.1.0'
 
 
 
