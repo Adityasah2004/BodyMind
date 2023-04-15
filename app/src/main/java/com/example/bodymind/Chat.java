@@ -1,41 +1,62 @@
 package com.example.bodymind;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Application;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 
-import java.util.List;
+import com.zegocloud.uikit.prebuilt.call.config.ZegoNotificationConfig;
+import com.zegocloud.uikit.prebuilt.call.invite.ZegoUIKitPrebuiltCallInvitationConfig;
+import com.zegocloud.uikit.prebuilt.call.invite.ZegoUIKitPrebuiltCallInvitationService;
 
 public class Chat extends AppCompatActivity {
+
+    EditText userIdEditText;
+    Button startBtn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
-        RecyclerView chatMessagesList = findViewById(R.id.chat_messages_list);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
-        chatMessagesList.setLayoutManager(layoutManager);
-
-        EditText chatInputText = findViewById(R.id.chat_input_text);
-        ImageButton sendButton = findViewById(R.id.sendButton);
-
-        // Add event listener for send button
-        sendButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String message = chatInputText.getText().toString().trim();
-                if (!message.isEmpty()) {
-                    // Send message
-                    chatInputText.setText("");
-                }
+        userIdEditText=findViewById(R.id.user_id_edit_text);
+        startBtn=findViewById(R.id.start_btn);
+        startBtn.setOnClickListener((v)->{
+            String userId=userIdEditText.getText().toString().trim();
+            if(userId.isEmpty()){
+                return;
             }
+            startService(userId);
+            Intent intent=new Intent(Chat.this, CallActivity.class);
+            intent.putExtra("userId",userId);
+            startActivity(intent);
         });
+
+    }
+
+    void startService(String userId){
+        Application application = getApplication();
+        long appID =1588845656 ;
+        String appSign ="1d1b48b440d039bfdabe6cbdbf4b88c4a4afff3a70ac889264905ab329cbbd5d";  // yourAppSign
+
+        String userName =userId;
+
+        ZegoUIKitPrebuiltCallInvitationConfig callInvitationConfig = new ZegoUIKitPrebuiltCallInvitationConfig();
+        callInvitationConfig.notifyWhenAppRunningInBackgroundOrQuit = true;
+        ZegoNotificationConfig notificationConfig = new ZegoNotificationConfig();
+        notificationConfig.sound = "zego_uikit_sound_call";
+        notificationConfig.channelID = "CallInvitation";
+        notificationConfig.channelName = "CallInvitation";
+        ZegoUIKitPrebuiltCallInvitationService.init(getApplication(), appID, appSign, userId, userName,callInvitationConfig);
+    }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        ZegoUIKitPrebuiltCallInvitationService.unInit();
     }
 }

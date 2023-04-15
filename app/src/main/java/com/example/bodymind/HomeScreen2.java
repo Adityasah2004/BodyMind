@@ -14,7 +14,7 @@ public class HomeScreen2 extends AppCompatActivity {
         setContentView(R.layout.activity_home_screen2);
     }
     public void onChatButtonClick(View view) {
-        Intent intent = new Intent(HomeScreen2.this, Chat2.class);
+        Intent intent = new Intent(HomeScreen2.this, Chat.class);
         startActivity(intent);
     }
 

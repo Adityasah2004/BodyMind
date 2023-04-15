@@ -21,5 +21,8 @@
     <string name="offline">Offline</string>
     <string name="chat_name">John Doe</string>
 
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+
 
 </resources>
