@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -56,7 +57,7 @@
             android:name=".Notification"
             android:exported="false" />
         <activity
-            android:name=".Med"
+            android:name=".ChatBot"
             android:exported="false" />
         <activity
             android:name=".HomeScreen2"

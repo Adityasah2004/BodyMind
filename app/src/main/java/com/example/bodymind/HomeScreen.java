@@ -20,7 +20,7 @@ public class HomeScreen extends AppCompatActivity {
         }
 
         public void onMedButtonClick(View view) {
-            Intent intent = new Intent(HomeScreen.this, Med.class);
+            Intent intent = new Intent(HomeScreen.this, ChatBot.class);
             startActivity(intent);
         }
         public void onappointmentButtonClick(View view) {
