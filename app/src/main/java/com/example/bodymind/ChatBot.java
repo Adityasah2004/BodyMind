@@ -102,7 +102,8 @@ public class ChatBot extends AppCompatActivity {
         // url for our brain
         // make sure to add mshape for uid.
         // make sure to add your url.
-        String url = "http://api.brainshop.ai/get?bid=175410&key=7vnAtyJaXv1DCouH&uid=[uid]&msg=[msg]" + userMsg;
+        String url = "http://api.brainshop.ai/get?bid=175410&key=7vnAtyJaXv1DCouH&uid=[uid]&msg="+userMsg;
+        String BASE_URL = "http://api.brainshop.ai/";
 
         // creating a variable for our request queue.
         RequestQueue queue = Volley.newRequestQueue(ChatBot.this);
