@@ -1,4 +1,4 @@
-package com.example.bodymind;
+package com.example.bodymind.activities;
 
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +16,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.bodymind.MessageModal;
+import com.example.bodymind.MessageRVAdapter;
+import com.example.bodymind.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -1,4 +1,4 @@
-package com.example.bodymind;
+package com.example.bodymind.activities;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
@@ -19,6 +19,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.developer.gbuttons.GoogleSignInButton;
+import com.example.bodymind.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -30,7 +31,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-public class DoctorLogin extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     private EditText loginEmail, loginPassword;
     private TextView signupRedirectText;
     private Button loginButton;
@@ -61,14 +62,14 @@ public class DoctorLogin extends AppCompatActivity {
                                 .addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                                     @Override
                                     public void onSuccess(AuthResult authResult) {
-                                        Toast.makeText(DoctorLogin.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                                        startActivity(new Intent(DoctorLogin.this, HomeScreen2.class));
+                                        Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+                                        startActivity(new Intent(LoginActivity.this, HomeScreen.class));
                                         finish();
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
                                     @Override
                                     public void onFailure(@NonNull Exception e) {
-                                        Toast.makeText(DoctorLogin.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
                                     }
                                 });
                     } else {
@@ -84,13 +85,13 @@ public class DoctorLogin extends AppCompatActivity {
         signupRedirectText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(DoctorLogin.this, DoctorSignup.class));
+                startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
             }
         });
         forgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(DoctorLogin.this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                 View dialogView = getLayoutInflater().inflate(R.layout.dialog_forgot, null);
                 EditText emailBox = dialogView.findViewById(R.id.emailBox);
                 builder.setView(dialogView);
@@ -100,17 +101,17 @@ public class DoctorLogin extends AppCompatActivity {
                     public void onClick(View view) {
                         String userEmail = emailBox.getText().toString();
                         if (TextUtils.isEmpty(userEmail) && !Patterns.EMAIL_ADDRESS.matcher(userEmail).matches()){
-                            Toast.makeText(DoctorLogin.this, "Enter your registered email id", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(LoginActivity.this, "Enter your registered email id", Toast.LENGTH_SHORT).show();
                             return;
                         }
                         auth.sendPasswordResetEmail(userEmail).addOnCompleteListener(new OnCompleteListener<Void>() {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 if (task.isSuccessful()){
-                                    Toast.makeText(DoctorLogin.this, "Check your email", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginActivity.this, "Check your email", Toast.LENGTH_SHORT).show();
                                     dialog.dismiss();
                                 } else {
-                                    Toast.makeText(DoctorLogin.this, "Unable to send, failed", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(LoginActivity.this, "Unable to send, failed", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
@@ -134,7 +135,7 @@ public class DoctorLogin extends AppCompatActivity {
         GoogleSignInAccount gAccount = GoogleSignIn.getLastSignedInAccount(this);
         if (gAccount != null){
             finish();
-            Intent intent = new Intent(DoctorLogin.this, HomeScreen2.class);
+            Intent intent = new Intent(LoginActivity.this, HomeScreen.class);
             startActivity(intent);
         }
         ActivityResultLauncher<Intent> activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
@@ -147,10 +148,10 @@ public class DoctorLogin extends AppCompatActivity {
                             try {
                                 task.getResult(ApiException.class);
                                 finish();
-                                Intent intent = new Intent(DoctorLogin.this, HomeScreen2.class);
+                                Intent intent = new Intent(LoginActivity.this, HomeScreen.class);
                                 startActivity(intent);
                             } catch (ApiException e){
-                                Toast.makeText(DoctorLogin.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
                             }
                         }
                     }

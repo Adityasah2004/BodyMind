@@ -1,10 +1,13 @@
-package com.example.bodymind;
+package com.example.bodymind.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.bodymind.Notification;
+import com.example.bodymind.R;
 
 public class HomeScreen extends AppCompatActivity {
 

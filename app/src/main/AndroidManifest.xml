@@ -22,13 +22,13 @@
             android:name=".CallActivity"
             android:exported="false" />
         <activity
-            android:name=".UploadActivity"
+            android:name=".activities.UploadActivity"
             android:exported="false" />
         <activity
-            android:name=".UpdateActivity"
+            android:name=".activities.UpdateActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailActivity"
+            android:name=".activities.DetailActivity"
             android:exported="false" />
         <activity
             android:name=".PatientList"
@@ -37,7 +37,7 @@
             android:name=".ToDo"
             android:exported="false" />
         <activity
-            android:name=".Registeration"
+            android:name=".activities.Registeration"
             android:exported="false" />
         <activity
             android:name=".AppointmentList"
@@ -46,52 +46,52 @@
             android:name=".Med2"
             android:exported="false" />
         <activity
-            android:name=".Doctor"
+            android:name=".activities.Doctor"
             android:exported="false" />
         <activity
-            android:name=".Report"
+            android:name=".activities.Report"
             android:exported="false" />
         <activity
-            android:name=".Appointment"
+            android:name=".activities.Appointment"
             android:exported="false" />
         <activity
             android:name=".Notification"
             android:exported="false" />
         <activity
-            android:name=".ChatBot"
+            android:name=".activities.ChatBot"
             android:exported="false" />
         <activity
-            android:name=".HomeScreen2"
+            android:name=".activities.HomeScreen2"
             android:exported="false" />
         <activity
-            android:name=".Chat"
+            android:name=".activities.Chat"
             android:exported="false" />
         <activity
-            android:name=".DoctorSignup"
+            android:name=".activities.DoctorSignup"
             android:exported="false" />
         <activity
-            android:name=".DoctorLogin"
+            android:name=".activities.DoctorLogin"
             android:exported="false" />
         <activity
-            android:name=".RolePage"
+            android:name=".activities.RolePage"
             android:exported="false" />
         <activity
-            android:name=".HomeScreen"
+            android:name=".activities.HomeScreen"
             android:exported="false" />
         <activity
-            android:name=".MainActivity3"
+            android:name=".activities.MainActivity3"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".activities.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".activities.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".InformationPage"
+            android:name=".activities.InformationPage"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".activities.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -100,9 +100,10 @@
             </intent-filter>
         </activity>
 
+
         <service
             android:name=".MyFirebaseMessagingService"
-            android:exported="false">
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

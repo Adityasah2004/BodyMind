@@ -1,10 +1,14 @@
-package com.example.bodymind;
+package com.example.bodymind.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.bodymind.R;
+import com.example.bodymind.activities.DoctorLogin;
+import com.example.bodymind.activities.InformationPage;
 
 public class RolePage extends AppCompatActivity {
 

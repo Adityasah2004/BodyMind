@@ -1,14 +1,16 @@
-package com.example.bodymind;
+package com.example.bodymind.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Registeration extends AppCompatActivity {
+import com.example.bodymind.R;
+
+public class UpdateActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registeration);
+        setContentView(R.layout.activity_update);
     }
 }

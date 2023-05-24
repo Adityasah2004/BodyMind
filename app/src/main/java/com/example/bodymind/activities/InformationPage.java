@@ -1,4 +1,4 @@
-package com.example.bodymind;
+package com.example.bodymind.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.bodymind.R;
 
 public class InformationPage extends AppCompatActivity {
 
@@ -47,19 +49,16 @@ public class InformationPage extends AppCompatActivity {
         nextbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (getitem(0) < 3)
-                    mSLideViewPager.setCurrentItem(getitem(1),true);
-                else {
-
-                    Intent i = new Intent(InformationPage.this, LoginActivity.class);
-                    startActivity(i);
+                    mSLideViewPager.setCurrentItem(getitem(1), true);
+                 else {
+                    Intent l = new Intent(InformationPage.this, LoginActivity.class);
+                    startActivity(l);
                     finish();
-
                 }
-
             }
         });
+
 
         skipbtn.setOnClickListener(new View.OnClickListener() {
             @Override

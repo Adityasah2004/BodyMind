@@ -1,4 +1,4 @@
-package com.example.bodymind;
+package com.example.bodymind.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
@@ -11,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+
+import com.example.bodymind.R;
 
 public class Appointment extends AppCompatActivity {
 

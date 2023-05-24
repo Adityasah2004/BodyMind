@@ -7,7 +7,7 @@
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:background="#DDB9F1"
-    tools:context=".Chat">
+    tools:context=".activities.Chat">
 
     <ImageView
         android:layout_width="200dp"
